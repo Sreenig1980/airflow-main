@@ -1,0 +1,41 @@
+# import functions from Airflow 
+
+from airflow import DAG
+from datetime import datetime
+import pandas as pd
+import json
+import requests
+from airflow.operators.bashOperator import bashOperator
+from airflow.operators.pythonOperator import pythonOperator
+
+# setup default arguments 
+
+default_args = default_args {
+  'author':'sreenivasulu',
+  'description':'this is my first Dag craeation with simple code',
+  'start_date':'datetime(2023,11,01),
+  'schedule_interval':@daily
+}
+
+# define function
+def print_function(name):
+  print("my name is + name ")
+
+# DAG setup
+
+dag1 = DAG(
+  'dag_id' = 'sample_dag',
+  'author' = 'sreenivasulu',
+  'description' = 'this is my first DAG creation'
+) 
+
+# Task setup
+
+print_task1 = pythonOperator(
+  python_callable = print_function('Sreenivasulu gaddam'),
+  dag = dag1
+)
+
+
+
+  
