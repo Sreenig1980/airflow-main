@@ -10,7 +10,7 @@ from airflow.operators.python import pythonOperator
 
 # setup default arguments 
 
-default_args = default_args {
+default_args = {
   'author':'sreenivasulu',
   'description':'this is my first Dag craeation with simple code',
   'start_date':'datetime(2023,11,01),
