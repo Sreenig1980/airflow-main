@@ -25,6 +25,7 @@ def print_function(name):
 
 dag1 = DAG(
   'dag_id' = 'sample_dag',
+  'default_args' = default_args,
   'author' = 'sreenivasulu',
   'description' = 'this is my first DAG creation'
 ) 
@@ -32,7 +33,8 @@ dag1 = DAG(
 # Task setup
 
 print_task1 = pythonOperator(
-  python_callable = print_function('Sreenivasulu gaddam'),
+  python_callable = print_function,
+  op_kwargs={'name':'Sreenivasulu Gaddam'},
   dag = dag1
 )
 
