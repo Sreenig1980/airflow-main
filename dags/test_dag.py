@@ -16,9 +16,8 @@ from airflow.sensors.external_task_sensor import ExternalTaskSensor
 default_args = {
   'author': 'sreenivasulu',
   'description': 'this is my first Dag craeation with simple code',
-  'start_date' : datetime(2023,11,01),
-  'schedule_interval': @daily
-}
+  'start_date': datetime(2022, 1, 21)
+},
 
 # define function
 def print_function(name):
