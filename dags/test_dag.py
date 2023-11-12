@@ -14,10 +14,10 @@ from airflow.sensors.external_task_sensor import ExternalTaskSensor
 # setup default arguments 
 
 default_args = {
-  'author': 'sreenivasulu',
+  'owner': 'sreenivasulu',
   'description': 'this is my first Dag craeation with simple code',
   'start_date': datetime(2022, 1, 21)
-},
+}
 
 # define function
 def print_function(name):
@@ -28,7 +28,6 @@ def print_function(name):
 dag1 = DAG(
   dag_id = 'sample_dag',
   default_args = default_args,
-  author = 'sreenivasulu',
   description = 'this is my first DAG creation',
   schedule_interval='0 9 * * *',
   catchup = False,
