@@ -35,12 +35,9 @@ dag1 = DAG(
 
 # Task setup
 
-print_task1 = pythonOperator(
+print_task1 = PythonOperator(
   python_callable = print_function,
   op_kwargs={'name':'Sreenivasulu Gaddam'},
   dag = dag1
 )
 
-
-
-  
