@@ -29,7 +29,7 @@ dag1 = DAG(
   dag_id = 'sample_dag',
   default_args = default_args,
   description = 'this is my first DAG creation',
-  schedule_interval='0 9 * * *',
+  schedule_interval='2/* * * * *',
   catchup = False,
 )
 
