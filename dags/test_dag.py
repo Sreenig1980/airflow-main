@@ -30,7 +30,7 @@ with DAG(
   default_args=default_args,
   description='this is my first DAG creation',
   start_date=datetime(2023, 11, 1),
-  schedule_interval='*/2 * * * *',
+  schedule_interval=@daily,
   catchup=True,
 ) as dag1:
 
